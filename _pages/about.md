@@ -6,7 +6,7 @@ subtitle: National University of Defense Technology (国防科技大学)
 
 profile:
   align: right
-  image: "lc简历.png"
+  image: "lc-profile.png"
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>PhD student</p>
