@@ -8,8 +8,14 @@
       {% if entry.icon %}
         <i class="{{ entry.icon }}"></i>
       {% endif %}
+      {% capture skill_name %}
+        {% if entry.name %}{{ entry.name }}{% elsif entry.label %}{{ entry.label }}{% endif %}
+      {% endcapture %}
+      {% capture skill_details %}
+        {% if entry.details %}{{ entry.details }}{% endif %}
+      {% endcapture %}
       <strong>
-        {{- entry.name -}}
+        {{- skill_name -}}
         {%- if entry.level %} ({{ entry.level }}){% endif %}:</strong
       >
       {% if entry.keywords %}
@@ -20,6 +26,8 @@
             {{ keyword }},
           {% endif %}
         {% endfor %}
+      {% elsif skill_details != '' %}
+        {{ skill_details }}
       {% endif %}
     </div>
   {% endfor %}

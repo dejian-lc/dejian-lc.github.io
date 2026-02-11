@@ -54,7 +54,7 @@ cv:
           - Yuchuan Luo
           - Zhiping Cai
         publisher: Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)
-        releaseDate: 2025
+        releaseDate: "2025"
         url: https://dejian-lc.github.io/humansam/
 
       - title: Non-local Guided Neural Fields for 4D CT Reconstruction
@@ -65,7 +65,7 @@ cv:
           - Chang Liu
           - Zhiping Cai
         publisher: IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)
-        releaseDate: 2025
+        releaseDate: "2025"
         url: https://doi.org/10.1109/TCSVT.2025.3600922
         doi: 10.1109/TCSVT.2025.3600922
 
@@ -77,38 +77,32 @@ cv:
           - Zhenyu Qiu
           - Zhiping Cai
         publisher: Proceedings of the 2025 International Conference on Intelligent Computing (ICIC)
-        releaseDate: 2025
+        releaseDate: "2025"
         url: http://poster-openaccess.com/files/ICIC2025/2647.pdf
 
     Awards:
-      - title: First-Class Starting Scholarship
-        awarder: National University of Defense Technology
-        date: 2024
-
-      - title: Outstanding Student
-        awarder: College of Computer Science, National University of Defense Technology
-        date: 2025
-
-      - title: Ziqiang Star Honor
-        awarder: Lanzhou University
-        date: 2020
+      - name: Outstanding Student
+        date: "2025"
+        location: College of Computer Science, National University of Defense Technology
+        summary:
+      - name: First-Class Starting Scholarship
+        date: "2024"
+        location: National University of Defense Technology
+        summary:
+      - name: Ziqiang Star Honor
+        date: "2020"
+        location: Lanzhou University
+        summary:
 
     Interests:
-      - name: Research Interests
-        keywords:
-          - generative detection
-          - multimodal models
-          - AIGC
-          - world models
+      - label: Research Interests
+        details: generative detection, multimodal models, AIGC, world models
 
     Skills:
-      - name: Programming
-        keywords:
-          - Python
-          - PyTorch
-      - name: AI
-        keywords:
-          - Proficient use of AI
+      - label: Programming
+        details: Python, PyTorch
+      - label: AI
+        details: Proficient use of AI
 
     Languages:
       - name: Chinese

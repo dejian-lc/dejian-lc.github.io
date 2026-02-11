@@ -8,7 +8,13 @@
       {% if entry.icon %}
         <i class="{{ entry.icon }}"></i>
       {% endif %}
-      <strong>{{ entry.name }}:</strong>
+      {% capture interest_name %}
+        {% if entry.name %}{{ entry.name }}{% elsif entry.label %}{{ entry.label }}{% endif %}
+      {% endcapture %}
+      {% capture interest_details %}
+        {% if entry.details %}{{ entry.details }}{% endif %}
+      {% endcapture %}
+      <strong>{{ interest_name }}:</strong>
       {% if entry.keywords %}
         {% for keyword in entry.keywords %}
           {% if forloop.last %}
@@ -17,6 +23,8 @@
             {{ keyword }},
           {% endif %}
         {% endfor %}
+      {% elsif interest_details != '' %}
+        {{ interest_details }}
       {% endif %}
     </div>
   {% endfor %}
