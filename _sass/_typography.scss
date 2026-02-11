@@ -134,3 +134,36 @@ blockquote {
     }
   }
 }
+
+.motto {
+  font-family: "Cinzel", serif;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.motto-subtle {
+  border-left-width: 8px;
+  border-left-color: var(--global-theme-color);
+  background: linear-gradient(90deg, rgba(181, 9, 172, 0.12) 0%, rgba(181, 9, 172, 0.06) 100%);
+  color: var(--global-text-color);
+  font-size: 1.02rem;
+  max-width: 69%;
+  padding: 0.9rem 1.2rem;
+  margin-top: 0.8rem;
+}
+
+@media (max-width: 576px) {
+  .motto-subtle {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+}
+
+.section-title-tight {
+  margin-top: 1.2rem;
+}
+
+.about-education + h2.section-title-tight {
+  margin-top: 0.8rem;
+}

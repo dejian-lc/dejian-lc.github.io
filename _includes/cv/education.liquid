@@ -5,6 +5,8 @@
   - JSONResume: institution, area, studyType, startDate, endDate, location, courses, highlights
 {% endcomment %}
 
+{% assign entries = entries | default: include.entries %}
+
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% for entry in entries %}
     <li class="list-group-item">
@@ -18,9 +20,21 @@
           {% endcapture %}
 
           {% if start_date != '' %}
-            {% comment %} Extract year only from dates like "1933-01-01" or just use "1933" as is {% endcomment %}
-            {% assign startDate = start_date | split: '-' | first %}
-            {% assign endDate = end_date | split: '-' | first | default: 'Present' %}
+            {% assign start_parts = start_date | split: '-' %}
+            {% assign startDate = start_parts[0] %}
+            {% if start_parts.size > 1 and start_parts[1] != '' %}
+              {% assign startDate = start_parts[0] | append: '-' | append: start_parts[1] %}
+            {% endif %}
+
+            {% assign end_parts = end_date | split: '-' %}
+            {% assign endDate = end_parts[0] %}
+            {% if end_parts.size > 1 and end_parts[1] != '' %}
+              {% assign endDate = end_parts[0] | append: '-' | append: end_parts[1] %}
+            {% endif %}
+            {% if endDate == '' %}
+              {% assign endDate = 'Present' %}
+            {% endif %}
+
             {% assign date = startDate | append: ' - ' | append: endDate %}
           {% else %}
             {% assign date = null %}
@@ -31,7 +45,7 @@
               <tr>
                 <td>
                   {% if date %}
-                    <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">{{ date }}</span>
+                    <span class="badge cv-date-badge font-weight-bold text-uppercase align-middle">{{ date }}</span>
                   {% endif %}
                 </td>
               </tr>
