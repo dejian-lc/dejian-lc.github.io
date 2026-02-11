@@ -6,6 +6,17 @@ design:
     show_footer: false
     show_top_note: false
   templates:
+    education_entry:
+      main_column: |
+        **STUDYTYPE**
+        INSTITUTION
+        AREA
+        SUMMARY
+        HIGHLIGHTS
+      degree_column:
+      date_and_location_column: |
+        LOCATION
+        DATE
     normal_entry:
       main_column: |
         **NAME**
