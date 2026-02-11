@@ -1,11 +1,13 @@
 # Project Status (al-folio)
 
 ## Overview
+
 - Repo: `dejian-lc.github.io` (al-folio template)
 - Local dev via Docker: `docker compose up` (http://localhost:8080)
 - CV PDF generation: local RenderCV inside container using venv at `/srv/jekyll/.venv`
 
 ## Key Changes (Config / Content)
+
 - `_config.yml`
   - `url: https://dejian-lc.github.io`, `baseurl:` empty
   - Scholar author set to `Liu, Chang`
@@ -27,6 +29,7 @@
   - Removed `_news/announcement_2.md` and `_news/announcement_3.md`
 
 ## Publications
+
 - `_bibliography/papers.bib` contains 3 papers and all are `selected = {true}`:
   1. ICCV 2025 HumanSAM (ICCV CCF A), co-first authors marked with `*`, annotation added
      - `google_scholar_id: u5HHmVD_uO8C`
@@ -36,6 +39,7 @@
   3. TCSVT 2025 Non-local Guided Neural Fields (TCSVT CCF B)
 
 ## CV (RenderCV)
+
 - `_data/cv.yml` rebuilt with:
   - Education entries (BEng LZU 2018-09–2022, MEng NUDT 2022-09–2023-12, PhD NUDT 2024-03–Present)
   - Publications section added (3 papers)
@@ -43,11 +47,13 @@
   - `assets/rendercv/rendercv_output/Chang_Liu_CV.pdf`
 
 ## Publications UI tweaks
+
 - Preview thumbnails enlarged (`_layouts/bib.liquid`, `_sass/_publications.scss`)
 - Website + Google Scholar badges are in the same container and aligned
 - Website badge uses shields.io
 
 ## Local PDF Generation
+
 1. Venv created in container: `/srv/jekyll/.venv`
 2. Generate PDF:
    ```bash
@@ -55,6 +61,7 @@
    ```
 
 ## Known Issues / Notes
+
 - If Jekyll fails to refresh, run:
   ```bash
   docker compose restart
@@ -62,6 +69,7 @@
 - Ensure `assets/img/publication_preview/humansam.jpg` exists
 
 ## TODO / Open Questions
+
 - Confirm CV text/wording for Education and mottos
 - Decide whether to include more sections (Experience, Awards, etc.) in CV
 - Commit & push changes
